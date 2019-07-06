@@ -237,7 +237,7 @@ svg:hover{
 }
 .personal_details2 p{
 	text-indent: 32px;
-	margin-top: 14px;
+	margin-top: 4px;
 }
 /*第三屏*/
 .section:nth-child(3){
@@ -380,6 +380,15 @@ svg:hover{
 	.head-nav a{
 		display: block;
 	}
+	.foreword{
+		width: 300px;
+		top: 15vh;
+		left: calc(50vw - 150px);
+	}
+	.info{
+		font-size: 22px;
+		bottom: 150px;
+	}
 	.btn{
 		float: right;
 		width: 50px;
@@ -409,7 +418,7 @@ svg:hover{
 	}
 	.portrait{
 		width: 48%;
-		height: 250px;
+		height: 180px;
 	}
 	.detailslist{
 		width: 52%;
@@ -418,15 +427,18 @@ svg:hover{
 		font-size: 14px;
 	}
 	.detailslist li{
-		height: 40px;
-		line-height: 40px;
+		height: 30px;
+		line-height: 30px;
 	}
 	.personal_details2{
 		width: 100%;
 		font-size: 15px;
 	}
 	.personal_details{
-		height: 70px;
+		height: 50px;
+	}
+	svg{
+		font-size: 24px;
 	}
 	.school,.major{
 		clear: both;
@@ -465,18 +477,18 @@ svg:hover{
 	}
 	.lookup img{
 		margin: 0px 5px;
-		width: 150px;
+		width: 78px;
 	}
 	#section6 .personal_details{
-		margin-top: 120px;
+		margin-top: 80px;
 	}
 	#section6 img{
-		margin: 80px auto;
+		margin: 50px auto;
 	}
 }
 @media screen and (max-width: 375px) {
 	.lookup img{
 		margin: 0px 5px;
-		width: 110px;
+		width: 80px;
 	}
 }
