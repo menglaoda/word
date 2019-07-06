@@ -126,7 +126,7 @@ a{
 	color: white;
 	width: 100%;
 	position: absolute;
-	bottom: 200px;
+	bottom: 80px;
 	font-weight: 500;
 	font-family: "仿体";
 }
@@ -456,7 +456,7 @@ svg:hover{
 		margin: 0;
 	}
 	.line {
-		margin: 20px auto;
+		margin: 16px auto;
 	}
 	.credentials{
 		width: 100%;
@@ -489,6 +489,6 @@ svg:hover{
 @media screen and (max-width: 375px) {
 	.lookup img{
 		margin: 0px 5px;
-		width: 80px;
+		width: 70px;
 	}
 }
