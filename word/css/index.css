@@ -1,0 +1,482 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #f3f3f3;
+}
+a{
+	text-decoration: none;
+}
+.section{
+	width: 100%;
+	height: 100vh;
+	border-bottom: solid 1px white;
+	position: relative;
+	overflow: hidden;
+	color: #333;
+}
+.f-l{
+	float: left;
+}
+.f-r{
+	float: right;
+}
+/*第一屏*/
+.header{
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	padding: 0px 20px;
+	font-size: 26px;
+	color: white;
+	background: #666;
+	position: relative;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+}
+.btn{
+	display: none;
+}
+.myname{
+	width: 150px;
+	height: 100%;
+	text-align: center;
+	font-weight: 600;
+	background: #cc0033;
+}
+.head-nav a{
+	color: white;
+	font-size: 20px;
+	margin: 0px 10px;
+}
+.banner{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.banner img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all 2s;
+}
+.banner img:nth-child(1){
+	opacity: 1;
+}
+.prev,.next{
+	width: 50px;
+	height: 50px;
+	background: url(../img/prev.png);
+	position: absolute;
+	top: calc(50vh - 25px);
+	opacity: 0.3;
+	transition: all 1s;
+	cursor: pointer;
+}
+.prev{
+	left: 0;
+}
+.next{
+	right: 0;
+	background: url(../img/next.png);
+}
+.prev:hover,.next:hover{
+	opacity: 0.8;
+}
+.slides{
+	width: 100%;
+	position: absolute;
+	bottom: 20px;
+	text-align: center;
+}
+.slides li{
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+	background: url(../img/dot.png) no-repeat -13px 0px;
+	display: inline-block;
+}
+.slides li:nth-child(1){
+	background: url(../img/dot.png) no-repeat 0px 0px;
+}
+.slides li:hover{
+	background: url(../img/dot.png) no-repeat 0px 0px;
+}
+.foreword{
+	width: 350px;
+	position: absolute;
+	top: 30vh;
+	left: calc(50vw - 175px);
+	color: white;
+	font-size: 20px;
+	text-indent: 40px;
+}
+.info{
+	text-align: center;
+	font-size: 33px;
+	color: white;
+	width: 100%;
+	position: absolute;
+	bottom: 200px;
+	font-weight: 500;
+	font-family: "仿体";
+}
+/*第二屏*/
+.section:nth-child(2){
+	background: white;
+}
+.personal_details{
+	width: 414px;
+	height: 90px;
+	line-height: 90px;
+	margin:  90px auto 30px;
+	letter-spacing: 10px;
+	font-size: 30px;
+	text-align: center;
+	position: relative;
+	font-weight: 600;
+}
+.personal_details span{
+	display: block;
+	border: solid 1px #999;
+	width: 100%;
+	height: 100%;
+}
+svg{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 40px;
+	font-family: "仿宋";
+	fill: transparent;
+	stroke: #999;
+	stroke-width: 4px;
+	stroke-dasharray: 0,0;
+}
+.action svg{
+	animation: mysvg 5s linear infinite;
+}
+svg:hover{
+	animation: 0s !important;
+}
+@keyframes mysvg{
+	0%{stroke-dasharray: 0,0;}
+	33%{stroke-dasharray: 20,20;stroke: blue;}
+	66%{stroke-dasharray: 200,0;stroke: gold;stroke-width: 10px;}
+	100%{stroke-dasharray: 20,20;stroke: green;stroke-width: 4px;}
+}
+.txt{
+	fill: black;
+}
+.action .txt{
+	animation: mytxt 5s 2s linear infinite both;
+}
+@keyframes mytxt{
+	0%{stroke-dasharray: 0,0; fill: none;}
+	33%{stroke-dasharray: 2,10;stroke: green;}
+	66%{stroke-dasharray: 50,0;stroke: brown;}
+	100%{stroke-dasharray: 2,10;stroke: darkmagenta;fill: none;}
+}
+.wrap{
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.personal_details1,.personal_details2{
+	width: 50%;
+}
+.personal_details1{
+	position: relative;
+	left: -50%;
+	transition: all 2s;
+	-ms-transition: all 2s;
+}
+.portrait{
+	width: 280px;
+	height: 280px;
+	background: url(../img/20140906021015_vH2J2.jpeg) no-repeat center/100%;
+}
+.action .portrait{
+	animation: myprotrait 15s linear infinite;
+}
+@keyframes myprotrait{
+	0%{background: url(../img/20140906021015_vH2J2.jpeg) no-repeat center/100%;}
+	50%{background: url(../img/20140906021015_vH2J2.jpeg) no-repeat center/150%;}
+	100%{background: url(../img/20140906021015_vH2J2.jpeg) no-repeat center/100%;}
+}
+.personal_details2{
+	position: relative;
+	left: 50%;
+	transition: all 2s;
+	-ms-transition: all 2s;
+}
+.action .personal_details1,.action .personal_details2{
+	left: 0;
+}
+.personal_details1 img{
+	width: 50%;
+}
+.detailslist{
+	list-style: none;
+	margin-left: 20px;
+}
+.detailslist li{
+	height: 46px;
+	line-height: 46px;
+	word-break: break-all;
+	border-bottom: solid 1px #ccc;
+}
+.personal_details2 p{
+	text-indent: 32px;
+	margin-top: 14px;
+}
+/*第三屏*/
+.section:nth-child(3){
+	background: #f3f3f3;
+}
+.school{
+	width: 200px;
+	text-align: right;
+	padding-right: 20px;
+	position: relative;
+	left: -50%;
+	transition: all 2s;
+}
+.action .school{
+	left: 0;
+}
+.major{
+	width: calc(100% - 200px);
+	padding-left: 20px;
+	border-left: solid 1px #ccc;
+	position: relative;
+	top: -500px;
+	transition: all 2s; 
+}
+.action .major{
+	top: 0;
+}
+.major p{
+	text-indent: 32px;
+}
+.school h4,.major h4{
+	margin-bottom: 20px;
+}
+.line{
+	clear: both;
+	width: 90%;
+	margin: 30px auto;
+	border-top: solid 1px #ccc;
+	position: relative;
+	left: 100%;
+	transition: all 2s;
+}
+.action .line{
+	left: 0;
+}
+/*第四屏*/
+.section:nth-child(4){
+	background: white;
+}
+/*第五屏*/
+.skill{
+	width: 50%;
+	border-right: solid 1px #ccc;
+}
+.skill_list{
+	width: 300px;
+	list-style: none;
+}
+.skill_list li{
+	margin: 20px 0px;
+}
+.skill_box{
+	height: 22px;
+	border: solid 1px blue;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.skill_progress{
+	position: absolute;
+	width: 0;
+	height: 22px;
+	background: green;
+	border-radius: 10px;
+	transition: all 2s 0.5s;		
+}
+.action .skill_progress1{
+	width: 80%;
+}
+.action .skill_progress2{
+	width: 90%;
+}
+.action .skill_progress3{
+	width: 98%;
+}
+.credentials{
+	text-align: center;
+	width: 50%;
+}
+.lookup{
+	width: 420px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	margin: 20px auto;
+}
+.lookup img{
+	width: 150px;
+	margin-left: 20px;
+	transform: rotate(360deg);
+	position: relative;
+	top: -500px;
+	left: -800px;
+	transition: all 1.5s ;
+}
+.action .lookup img{
+	left: 0;
+	top: 0;
+	transform: rotate(0deg);
+}
+/*第六屏*/
+.section:nth-child(6){
+	background: #999;
+	color: white;
+	letter-spacing: 30px;
+}
+.section:nth-child(6) img{
+	display: block;
+	width: 150px;
+	margin: 10px auto 80px;
+}
+.section:nth-child(6) p{
+	text-align: center;
+	margin-top: 20px;	
+	transition: letter-spacing 2s;
+}
+.action p{
+	letter-spacing: 0px;
+}
+@media screen  and (max-width: 414px) {
+	.head-nav{
+		display: none;
+		width: 100vw;
+		height: calc(100vh - 50px);
+		position: relative;
+		left: 20px;
+		background: #999;
+	}
+	.head-nav a{
+		display: block;
+	}
+	.btn{
+		float: right;
+		width: 50px;
+		display: block;
+	}
+	.header{
+		height: 50px;
+		line-height: 50px;
+		width: 100%;
+		top: 0px;
+		background: #666;
+	}
+	.myname{
+		background: transparent;
+	}
+	.banner img{
+		width: 200%;
+	}
+	.personal_details{
+		width: 90%;
+	}
+	.personal_details{
+		margin: 70px auto 5px;
+	}
+	.personal_details1{
+		width: 100%;
+	}
+	.portrait{
+		width: 48%;
+		height: 250px;
+	}
+	.detailslist{
+		width: 52%;
+		text-indent: 16px;
+		margin: 0;
+		font-size: 14px;
+	}
+	.detailslist li{
+		height: 40px;
+		line-height: 40px;
+	}
+	.personal_details2{
+		width: 100%;
+		font-size: 15px;
+	}
+	.personal_details{
+		height: 70px;
+	}
+	.school,.major{
+		clear: both;
+		width: 100%;
+	}
+	.major{
+		top: 0;
+		left: 500px;
+		border: none;
+	}
+	.action .major{
+		left: 0;
+	}
+	.school h4, .major h4{
+		margin: 0;
+	}
+	.line {
+		margin: 20px auto;
+	}
+	.credentials{
+		width: 100%;
+	}
+	.skill{
+		border: none;
+		width: 100%;
+	}
+	.skill_list{
+		width: 100%;
+	}
+	.skill_list li{
+		margin: 10px 0px;
+	}
+	.lookup {
+		width: 100%;
+		margin: 10px auto;
+	}
+	.lookup img{
+		margin: 0px 5px;
+		width: 150px;
+	}
+	#section6 .personal_details{
+		margin-top: 120px;
+	}
+	#section6 img{
+		margin: 80px auto;
+	}
+}
+@media screen and (max-width: 375px) {
+	.lookup img{
+		margin: 0px 5px;
+		width: 110px;
+	}
+}
